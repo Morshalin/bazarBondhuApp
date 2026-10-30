@@ -655,23 +655,39 @@ const Index = (props) => {
   );
 };
 
-export async function getServerSideProps({ req, res }) {
-  if (!req.headers.cookie) {
-    res.writeHead(302, { Location: "/auth/sly-login" });
-    res.end();
+function readCookie(cookieHeader, name) {
+  if (!cookieHeader) return "";
+  const prefix = `${name}=`;
+  const row = cookieHeader
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(prefix));
+  if (!row) return "";
+  try {
+    return decodeURIComponent(row.slice(prefix.length));
+  } catch {
+    return row.slice(prefix.length);
   }
-  const token = req.headers.cookie
-    ?.split("; ")
-    ?.find((row) => row.startsWith("token"))
-    ?.split("=")[1];
+}
+
+function redirectToLogin(res) {
+  res.setHeader(
+    "Set-Cookie",
+    "token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+  );
+  return {
+    redirect: {
+      destination: "/auth/sly-login",
+      permanent: false,
+    },
+  };
+}
+
+export async function getServerSideProps({ req, res }) {
+  const token = readCookie(req.headers.cookie, "token");
 
   if (!token) {
-    return {
-      redirect: {
-        destination: "/auth/sly-login",
-        permanent: false,
-      },
-    };
+    return redirectToLogin(res);
   }
 
   const resp = await fetch(`${process.env.api_backend_url}/get-site-info`, {
@@ -681,12 +697,18 @@ export async function getServerSideProps({ req, res }) {
       "Content-Type": "application/json",
     },
   });
-  const data = await resp.json();
-  // console.log(data.data.permissions);
+  const data = await resp.json().catch(() => null);
+  const permissions = data?.data?.permissions;
+
+  // Invalid or expired tokens come back as { success: false } with no data.
+  if (!data?.success || !Array.isArray(permissions)) {
+    return redirectToLogin(res);
+  }
+
   return {
     props: {
-      serverPermissions: data.data.permissions,
-    }, // will be passed to the page component as props
+      serverPermissions: permissions,
+    },
   };
 }
 
