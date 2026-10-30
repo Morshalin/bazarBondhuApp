@@ -1,0 +1,14 @@
+export const SET_MODULE_DATA = 'SET_MODULE_DATA';
+export const SET_MODULE_ERRORS = 'SET_MODULE_ERRORS';
+export const SET_MESSAGE = 'SET_MESSAGE';
+export const SET_MODULE_LIST = 'SET_MODULE_LIST';
+export const SET_MODULE = 'SET_MODULE';
+
+export const RESET_MESSAGE = 'RESET_MESSAGE';
+export const RESET_MODULE_DATA = 'RESET_MODULE_DATA';
+
+export const REMOVE_MODULE = 'REMOVE_MODULE';
+
+export const CHANGE_MODULE = 'CHANGE_MODULE';
+
+export const EDIT_MODULE = 'EDIT_MODULE';

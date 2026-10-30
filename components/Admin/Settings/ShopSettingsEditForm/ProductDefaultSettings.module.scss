@@ -1,0 +1,35 @@
+.button {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #212529;
+  letter-spacing: 1px;
+  font-weight: 600;
+  &:focus {
+    box-shadow: none;
+  }
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";
+    top: 50%;
+    right: 10px;
+    color: #424242;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 700;
+    transform: translateY(-50%);
+  }
+
+  &[aria-expanded="true"] {
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f068";
+      top: 50%;
+      right: 10px;
+      color: #424242;
+      position: absolute;
+      font-size: 16px;
+      font-weight: 700;
+      transform: translateY(-50%);
+    }
+  }
+}

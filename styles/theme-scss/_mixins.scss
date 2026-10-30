@@ -1,0 +1,97 @@
+@mixin  open-suns {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin exo-two {
+    font-family: 'Exo 2', sans-serif;
+}
+
+@mixin heading-font {
+    font-family: 'Roboto', 'Hind Siliguri', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+@mixin body-font {
+    font-family: 'Open Sans', 'Hind Siliguri', sans-serif;    
+}
+
+@mixin alt-font {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+@mixin transition-all() {
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+@mixin product-btn{
+    padding: .375rem .5rem;
+    font-size: .875rem;
+    background: $theme-color-two;
+    color: $theme-color-dark;
+    &:hover{
+        background: $theme-color-one;
+        color: $theme-color-white;
+    }
+}
+
+@mixin bg-linear {
+    background: $theme-color-two;
+    background-image: linear-gradient(to right, $theme-color-two-dark , $theme-color-two, $theme-color-two-dark , $theme-color-two, $theme-color-two-dark);
+}
+
+@mixin bg-linear-right {
+    background: $theme-color-two;
+    background-image: linear-gradient(to right, $theme-color-one , $theme-color-two-dark);
+}
+
+@mixin bgsc-linear {
+    background: $theme-color-two;
+    background-image: linear-gradient(to right, $theme-color-two , $theme-color-one, $theme-color-two , $theme-color-one, $theme-color-two);
+}
+
+@mixin border-0 {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;    
+}
+
+@mixin border-375 {
+    border-radius: .375rem;
+    -webkit-border-radius: .375rem;
+    -moz-border-radius: .375rem;
+    -ms-border-radius: .375rem;
+    -o-border-radius: .375rem;
+}
+
+@mixin border-25 {
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+}
+
+@mixin border-625 {
+    border-radius: .625rem;
+    -webkit-border-radius: .625rem;
+    -moz-border-radius: .625rem;
+    -ms-border-radius: .625rem;
+    -o-border-radius: .625rem;
+}
+
+@mixin border-50 {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}

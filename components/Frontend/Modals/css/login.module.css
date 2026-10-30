@@ -1,0 +1,23 @@
+.google_button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+font-size: 1rem;
+  background-color: #d52d28;
+  color: #fff;
+}
+.google_button:hover {
+  background-color: #b9312d;
+  color: #fff;
+}
+.or-word {
+  position: absolute !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -64%);
+}
+.gmail-img {
+  background: #fafafa;
+  border: 1px solid #dddddd;
+  padding: 4px;
+  border-radius: 4px;
+}

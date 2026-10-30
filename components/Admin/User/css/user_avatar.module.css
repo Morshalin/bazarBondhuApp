@@ -1,0 +1,13 @@
+.avatarImage {
+    border-radius: 1px;
+    height:200px;
+    width:200px;
+    overflow: hidden;
+    margin:0 auto;
+    position:relative;
+    border:1px solid;
+}
+.avatarImage img {
+    height:inherit;
+    margin-left:-15%;
+}

@@ -1,0 +1,2 @@
+export const SET_SALE_RETURN_LIST = 'SET_SALE_RETURN_LIST';
+export const SET_SALE_RETURN = 'SET_SALE_RETURN';

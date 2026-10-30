@@ -1,0 +1,14 @@
+export const SET_USER_DATA = 'SET_USER_DATA';
+export const SET_USER_ROLES = 'SET_USER_ROLES';
+export const SET_USER_MESSAGE = 'SET_USER_MESSAGE';
+export const SET_USER_ERRORS = 'SET_USER_ERRORS';
+export const SET_USER_LIST = 'SET_USER_LIST';
+export const SET_USER = 'SET_USER';
+
+export const RESET_USER_DATA = 'RESET_USER_DATA';
+export const RESET_USER_MESSAGE = 'RESET_USER_MESSAGE';
+
+export const CHANGE_USER_STATUS = 'CHANGE_USER_STATUS';
+export const CHANGE_AVATAR_IMAGE = 'CHANGE_AVATAR_IMAGE';
+export const REMOVE_USER = 'REMOVE_USER';
+export const EDIT_USER = 'EDIT_USER';

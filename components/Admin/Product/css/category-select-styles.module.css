@@ -1,0 +1,17 @@
+.customCatList {
+  display: block;
+  height: 560px;
+  overflow: hidden;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+.customImageList {
+  display: block;
+  height: 250px;
+  overflow: hidden;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}

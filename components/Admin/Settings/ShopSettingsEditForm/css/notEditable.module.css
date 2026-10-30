@@ -1,0 +1,18 @@
+.notEditable:before{
+    content: "Non Editable Section";
+    position: absolute;
+    background: #09040482;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    cursor: not-allowed;
+  }

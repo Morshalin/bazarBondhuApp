@@ -1,0 +1,27 @@
+.error {
+  color: red;
+  background: rgba(244, 195, 48, 0.85);
+  padding: 2px 8px;
+}
+
+.success {
+  color: #28a745;
+  background: rgba(244, 195, 48, 0.85);
+  padding: 2px 8px;
+}
+
+.google_button,
+.btn {
+  background: #d52d28 !important;
+  color: #fff !important;
+}
+.google_button:hover {
+  background: #b9312d !important;
+  color: #fff !important;
+}
+.or-word {
+  position: absolute !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -64%);
+}
